@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css?family=Lora|Nunito|Nunito+Sans|Playfair+Display:400,400i');
+* {
+    border: 0
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', serif;
+}
+
+#wrapper{
+    overflow-x: hidden;
+}
+
+.playFairDisplay {
+    font-family: 'Playfair Display', serif;
+}
+
+.nunito {
+    font-family: 'Nunito', sans-serif;
+}
+
+.nunitoSans {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.divider {
+    position: relative;
+    background-image: url('/storage/myAssets/pink_divider_bottom.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 15vh;
+    top: -95px;
+    border: 0;
+}
+
+.joinWithDivider {
+    position: relative;
+    top: -95px;
+}
+
+.fullWidth {
+    min-width: 100vw;
+}
+
+.gap {
+    padding-top: 80px;
+}
+
+.bx-wrapper {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+}
+#logo img{
+    max-width: 18vw;
+}
+#landing {
+    position: relative;
+    background-image: url('/storage/myAssets/landing11.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 95vh;
+}
+
+#aboutUs {
+    position: relative;
+    background: #E7D7D7;
+    min-height: 80vh;
+}
+
+#aboutUs #aboutUsHeading {
+    font-size: 4em;
+    color: #A57979;
+}
+
+#aboutUs #aboutUsSubHeading {
+    font-size: 1em;
+    color: #191919;
+}
+
+#aboutUs #aboutUsDetailDiv {
+    font-family: 'Lora', serif;
+    color: #191919;
+    margin-top: 35px;
+}
+
+#signatureProducts #signatureProductsHeading {
+    font-size: 2em;
+    color: #191919;
+}
+
+#breads .hiddenText{
+    height: 60px;
+}
+
+#muffins {
+    color: #191919;
+    background: url('/storage/myAssets/gradient.png');
+    min-height: 90vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 140px 0 140px 0;
+}
+
+#muffins .muffinName {
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+#muffins .muffinDetail {
+    min-height: 5vh;
+}
+
+#muffins .orderButton {
+    margin-top: 45px;
+}
+
+#muffins .orderButton .btn {
+    width: 60%;
+}
+
+#pastries {
+    background: #E7D7D7;
+    min-height: 90vh;
+}
+
+#pastries #rightDiv .pastryImage img {
+    border-radius: 100%;
+}
+
+.pastryNameHeading {
+    font-size: 1.6em;
+}
+
+#pastries #leftDiv .btn {
+    border-radius: 100%;
+}
+
+#userReviews {
+    position: relative;
+    min-height: 90vh;
+    background: url('/storage/myAssets/userReviewsBackground.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#userReviews .heading {
+    font-size: 2.8em;
+    font-style: italic;
+    font-weight: 700;
+    color: #191919;
+}
+
+#userReviews .slideHeading {
+    font-size: 1.4em;
+    font-style: italic;
+    font-weight: 700;
+    color: #AD8585;
+}
+
+#userReviews .slideDetail {
+    margin: 30px 50px 0 50px;
+}
+
+#userReviews #slider .border {
+    border-bottom: 2px solid #191919;
+    margin: 30px 50px 0 50px;
+}
+
+#siteFooter {
+    background: #E7D7D7;
+    min-height: 100vh;
+    color: #A57979;
+}
+
+#siteFooter #siteFooterImage img {
+    width: 100%
+}
+
+#siteFooter #siteFooterDetails .heading {
+    font-size: 1.6em;
+}
+
+#siteFooter #siteFooterDetails .subHeading {
+    font-size: 1em;
+}
+
+#siteFooter #siteFooterDetails .details {
+    max-width: 20vw;
+}
