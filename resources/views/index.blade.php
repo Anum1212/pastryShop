@@ -1,6 +1,8 @@
 @extends('layouts.landingPage') @section('head') @endsection @section('style')
-@endsection @section('body') @include('includes.landing') {{-- Wrapper Start --}}
+@endsection @section('body') 
 <div id="wrapper">
+    {{-- Wrapper Start --}}
+    @include('includes.landing') 
     {{-- Divider --}}
     <div class="divider"></div>
 
