@@ -1,0 +1,29 @@
+body {
+    background: rgba(243, 243, 243, 0.322);
+    margin: 0;
+    padding: 0;
+}
+#logo img {
+    max-width: 18vw;
+}
+.topImage {
+    background-image: url('/storage/myAssets/topImage1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+}
+.title{
+    margin: 25px 0 25px 0;
+}
+.invoice{
+    border: 2px solid #EBEBEB;
+    background: #fff;
+    padding:50px;
+    max-width: 980px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

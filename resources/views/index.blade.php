@@ -1,15 +1,7 @@
-@extends('layouts.app') @section('head') @endsection @section('style')
-<style>
-    .col {
-        border: 2px solid green;
-    }
-
-</style>
-@endsection @section('body') {{-- Wrapper Start --}} {{-- Landing Start--}}
-<div id="landing">
-    {{-- NavBar --}} @include('layouts.navBar') {{-- image in css --}}
-</div> {{-- Landing End --}} {{-- Divider --}}
+@extends('layouts.landingPage') @section('head') @endsection @section('style')
+@endsection @section('body') @include('includes.landing') {{-- Wrapper Start --}}
 <div id="wrapper">
+    {{-- Divider --}}
     <div class="divider"></div>
 
     {{-- About Us start --}}
@@ -19,7 +11,7 @@
         <div class="gap"></div>
 
         {{-- Heading Div Start--}}
-        <div id="aboutUsHeadingDiv" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div id="aboutUsHeadingDiv">
             {{-- Heading Start--}}
             <div id="aboutUsHeading" class="playFairDisplay">
                 Pastry Love!
@@ -28,7 +20,7 @@
                 BOULANGERIE & PATTISERIE
             </div> {{-- Sub Heading End --}}
         </div> {{-- Heading Div End --}} {{-- Detail Div Start --}}
-        <div id="aboutUsDetailDiv" class="mx-auto col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div id="aboutUsDetailDiv" class="mx-auto col-md-6">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum autem adipisci alias quia qui iusto ab natus, eius impedit
             quam ipsa! Non perspiciatis inventore excepturi. Nisi repellat illo quidem enim.Nulla soluta quidem nemo sunt
             accusamus magnam ducimus sed voluptatem saepe natus nisi reiciendis rerum minima fugit assumenda temporibus magni
@@ -52,23 +44,32 @@
             {{-- animate whole object div start --}}
             <div class="row animateWholeObjectDiv">
                 {{-- Individual Bread 1 Start--}}
-                <div class="bread animateObject col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                <div class="bread animateObject col-lg-4 col-md-6">
                     <img src="{{asset('/storage/myAssets/bread1.png')}}" alt="">
-                    <div class="hiddenText">
-                        <p class="breadName" style="display:none">SWEET PEACH BREAD</p>
-                    </div>
+                    <p class="breadName">SWEET PEACH BREAD</p>
+                    {{-- Muffin Price --}}
+                    <span class="playFairDisplay" style="color:brown; font-size: 1.6em"><b>Rs</b>100</span>
+                        <div class="orderButton marginBotttom">
+                            <a href="{{ route('cart.add', ['productId'=>'b1', 'productName'=>'Sweet Peach Bread', 'productPrice'=>'100']) }}" class="btn btn-secondary">Order Here</a>
+                        </div>
                 </div>{{-- Individual Bread 1 End--}} {{-- Individual Bread 2 Start--}}
-                <div class="bread animateObject col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                <div class="bread animateObject col-lg-4 col-md-6">
                     <img src="{{asset('/storage/myAssets/bread2.png')}}" alt="">
-                    <div class="hiddenText">
-                        <p class="breadName" style="display:none">SWEET ALMOND BREAD</p>
-                    </div>
+                    <p class="breadName">SWEET ALMOND BREAD</p>
+                    {{-- Muffin Price --}}
+                    <span class="playFairDisplay" style="color:brown; font-size: 1.6em"><b>Rs</b>150</span>
+                        <div class="orderButton marginBotttom">
+                            <a href="{{ route('cart.add', ['productId'=>'b2', 'productName'=>'Sweet Almond Bread', 'productPrice'=>'150']) }}" class="btn btn-secondary">Order Here</a>
+                        </div>
                 </div>{{-- Individual Bread 2 End--}} {{-- Individual Bread 3 Start--}}
-                <div class="bread animateObject col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                <div class="bread animateObject col-lg-4 col-md-6">
                     <img src="{{asset('/storage/myAssets/bread3.png')}}" alt="">
-                    <div class="hiddenText">
-                        <p class="breadName" style="display:none">CHOCO COOKIE BREAD</p>
-                    </div>
+                    <p class="breadName">CHOCO COOKIE BREAD</p>
+                    {{-- Muffin Price --}}
+                    <span class="playFairDisplay" style="color:brown; font-size: 1.6em"><b>Rs</b>200</span>
+                        <div class="orderButton marginBotttom">
+                            <a href="{{ route('cart.add', ['productId'=>'b3', 'productName'=>'Choco Cookie Bread', 'productPrice'=>'200']) }}" class="btn btn-secondary">Order Here</a>
+                        </div>
                 </div>{{-- Individual Bread 3 End--}}
 
             </div> {{-- animate whole object Div End--}}
@@ -77,7 +78,7 @@
             {{-- animate whole object div start --}}
             <div class="row animateWholeObjectDiv">
                 {{-- Individual Muffin 1 Start--}}
-                <div class="muffin animateObject col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="muffin animateObject col-lg-3 col-sm-6 col-xs-12">
                     {{-- Muffin Img --}}
                     <div class="muffinImg">
                         <img src="{{asset('/storage/myAssets/muffin1.png')}}" alt=""> {{-- Muffin Name --}}
@@ -89,12 +90,14 @@
                     <div class="muffinDetail">
                         These moist chocolate muffins are rich, moist and chocolately.
                     </div>
+                    {{-- Muffin Price --}}
+                    <span class="playFairDisplay" style="color:brown; font-size: 1.6em"><b>Rs</b>100</span>
                     {{-- Muffin Order Button --}}
                     <div class="orderButton">
-                        <a href="" class="btn btn-light">Order Here</a>
+                        <a href="{{ route('cart.add', ['productId'=>'m1', 'productName'=>'Cherry Muffin', 'productPrice'=>'100']) }}" class="btn btn-light">Order Here</a>
                     </div>
                 </div>{{-- Individual Muffin 1 End --}} {{-- Individual Muffin 2 Start--}}
-                <div class="muffin animateObject col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="muffin animateObject col-lg-3 col-sm-6 col-xs-12">
                     {{-- Muffin Img --}}
                     <div class="muffinImg">
                         <img src="{{asset('/storage/myAssets/muffin2.png')}}" alt=""> {{-- Muffin Name --}}
@@ -106,12 +109,14 @@
                     <div class="muffinDetail">
                         Leverage agile frameworks to provide a robust synopsis for high.
                     </div>
+                    {{-- Muffin Price --}}
+                    <span class="playFairDisplay" style="color:brown; font-size: 1.6em"><b>Rs</b>150</span>
                     {{-- Muffin Order Button --}}
                     <div class="orderButton">
-                        <a href="" class="btn btn-light">Order Here</a>
+                        <a href="{{ route('cart.add', ['productId'=>'m2', 'productName'=>'Almond Muffin', 'productPrice'=>'150']) }}" class="btn btn-light">Order Here</a>
                     </div>
                 </div>{{-- Individual Muffin 2 End --}} {{-- Individual Muffin 3 Start--}}
-                <div class="muffin animateObject col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="muffin animateObject col-lg-3 col-sm-6 col-xs-12">
                     {{-- Muffin Img --}}
                     <div class="muffinImg">
                         <img src="{{asset('/storage/myAssets/muffin3.png')}}" alt=""> {{-- Muffin Name --}}
@@ -123,12 +128,14 @@
                     <div class="muffinDetail">
                         Iterative approaches to corporate strategy foster collaborative.
                     </div>
+                    {{-- Muffin Price --}}
+                    <span class="playFairDisplay" style="color:brown; font-size: 1.6em"><b>Rs</b>200</span>
                     {{-- Muffin Order Button --}}
                     <div class="orderButton">
-                        <a href="" class="btn btn-light">Order Here</a>
+                        <a href="{{ route('cart.add', ['productId'=>'m3', 'productName'=>'Choco Muffin', 'productPrice'=>'200']) }}" class="btn btn-light">Order Here</a>
                     </div>
                 </div>{{-- Individual Muffin 3 End --}} {{-- Individual Muffin 4 Start--}}
-                <div class="muffin animateObject col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="muffin animateObject col-lg-3 col-sm-6 col-xs-12">
                     {{-- Muffin Img --}}
                     <div class="muffinImg">
                         <img src="{{asset('/storage/myAssets/muffin4.png')}}" alt=""> {{-- Muffin Name --}}
@@ -140,9 +147,11 @@
                     <div class="muffinDetail">
                         Capitalize on low hanging fruit to identify a ballpark value added.
                     </div>
+                    {{-- Muffin Price --}}
+                    <span class="playFairDisplay" style="color:brown; font-size: 1.6em"><b>Rs</b>250</span>
                     {{-- Muffin Order Button --}}
                     <div class="orderButton">
-                        <a href="" class="btn btn-light">Order Here</a>
+                        <a href="{{ route('cart.add', ['productId'=>'m4', 'productName'=>'Peach Muffin', 'productPrice'=>'250']) }}" class="btn btn-light">Order Here</a>
                     </div>
                 </div>{{-- Individual Muffin 4 End --}}
             </div> {{-- animate whole object Div End --}} {{-- Divider --}}
@@ -176,10 +185,10 @@
             <div id="rightDiv" class="col-12">
                 {{-- Individual pastry 1 start --}}
                 <div id="pastry1" class="pastry row">
-                    <div class="pastryImage col-xl-7 col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                    <div class="pastryImage col-sm-7 col-xs-12">
                         <img src="{{asset('/storage/myAssets/pastry1.jpg')}}" alt=""> {{-- Muffin Name --}}
                     </div>
-                    <div class="pastryDetails col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="pastryDetails col-sm-3 col-xs-12">
                         <div class="pastryNameHeading playFairDisplay">
                             Tiramisu
                         </div>
@@ -199,18 +208,19 @@
                                 <li>Cocoa</li>
                             </ul>
                         </div>
+                        <span class="playFairDisplay" style="color:brown; font-size: 1.6em"><b>Rs</b>100</span>
                         <div class="orderButton text-center">
-                            <a href="" class="btn btn-light">Order Here</a>
+                            <a href="{{ route('cart.add', ['productId'=>'p1', 'productName'=>'Tiramisu', 'productPrice'=>'100']) }}" class="btn btn-light">Order Here</a>
                         </div>
                     </div>
                 </div> {{-- Individual Pastry 1 End --}} {{-- Individual pastry 2 start --}}
                 <div id="pastry2" class="pastry row" style="display: none;">
-                    <div class="pastryImage col-xl-7 col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                    <div class="pastryImage col-sm-7 col-xs-12">
                         <img src="{{asset('/storage/myAssets/pastry2.jpg')}}" alt=""> {{-- Muffin Name --}}
                     </div>
-                    <div class="pastryDetails col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="pastryDetails col-sm-3 col-xs-12">
                         <div class="pastryNameHeading playFairDisplay">
-                            Cooker Cake
+                            Cooker Cake <span>
                         </div>
                         <div class="ingredientSubHeading">
                             Ingredients
@@ -227,18 +237,19 @@
                                 <li>Cocoa</li>
                             </ul>
                         </div>
+                        <span class="playFairDisplay" style="color:brown; font-size: 1.6em"><b>Rs</b>120</span>
                         <div class="orderButton text-center">
-                            <a href="" class="btn btn-light">Order Here</a>
+                            <a href="{{ route('cart.add', ['productId'=>'p2', 'productName'=>'Cooker Cake', 'productPrice'=>'120']) }}" class="btn btn-light">Order Here</a>
                         </div>
                     </div>
                 </div> {{-- Individual Pastry 2 End --}} {{-- Individual pastry 3 start --}}
                 <div id="pastry3" class="pastry row" style="display: none;">
-                    <div class="pastryImage col-xl-7 col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                    <div class="pastryImage col-sm-7 col-xs-12">
                         <img src="{{asset('/storage/myAssets/pastry3.jpg')}}" alt=""> {{-- Muffin Name --}}
                     </div>
-                    <div class="pastryDetails col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="pastryDetails col-sm-3 col-xs-12">
                         <div class="pastryNameHeading playFairDisplay">
-                            Caramello
+                            Caramello <span>
                         </div>
                         <div class="ingredientSubHeading">
                             Ingredients
@@ -255,18 +266,19 @@
                                 <li>Cocoa Powder</li>
                             </ul>
                         </div>
+                        <span class="playFairDisplay" style="color:brown; font-size: 1.6em"><b>Rs</b>140</span>
                         <div class="orderButton text-center">
-                            <a href="" class="btn btn-light">Order Here</a>
+                            <a href="{{ route('cart.add', ['productId'=>'p3', 'productName'=>'Caramello', 'productPrice'=>'140']) }}" class="btn btn-light">Order Here</a>
                         </div>
                     </div>
                 </div> {{-- Individual Pastry 3 End --}} {{-- Individual pastry 4 start --}}
                 <div id="pastry4" class="pastry row" style="display: none;">
-                    <div class="pastryImage col-xl-7 col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                    <div class="pastryImage col-sm-7 col-xs-12">
                         <img src="{{asset('/storage/myAssets/pastry4.jpg')}}" alt=""> {{-- Muffin Name --}}
                     </div>
-                    <div class="pastryDetails col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="pastryDetails col-sm-3 col-xs-12">
                         <div class="pastryNameHeading playFairDisplay">
-                            Waffle cream
+                            Waffle cream <span>
                         </div>
                         <div class="ingredientSubHeading">
                             Ingredients
@@ -283,18 +295,19 @@
                                 <li>Coconut Milk</li>
                             </ul>
                         </div>
+                        <span class="playFairDisplay" style="color:brown; font-size: 1.6em"><b>Rs</b>160</span>
                         <div class="orderButton text-center">
-                            <a href="" class="btn btn-light">Order Here</a>
+                            <a href="{{ route('cart.add', ['productId'=>'p4', 'productName'=>'Waffle cream', 'productPrice'=>'160']) }}" class="btn btn-light">Order Here</a>
                         </div>
                     </div>
                 </div> {{-- Individual Pastry 4 End --}} {{-- Individual pastry 5 start --}}
                 <div id="pastry5" class="pastry row" style="display: none;">
-                    <div class="pastryImage col-xl-7 col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                    <div class="pastryImage col-sm-7 col-xs-12">
                         <img src="{{asset('/storage/myAssets/pastry5.jpg')}}" alt=""> {{-- Muffin Name --}}
                     </div>
-                    <div class="pastryDetails col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="pastryDetails col-sm-3 col-xs-12">
                         <div class="pastryNameHeading playFairDisplay">
-                            Stracciatella
+                            Stracciatella <span>
                         </div>
                         <div class="ingredientSubHeading">
                             Ingredients
@@ -311,18 +324,19 @@
                                 <li>Lady Fingers</li>
                             </ul>
                         </div>
+                        <span class="playFairDisplay" style="color:brown; font-size: 1.6em"><b>Rs</b>180</span>
                         <div class="orderButton text-center">
-                            <a href="" class="btn btn-light">Order Here</a>
+                            <a href="{{ route('cart.add', ['productId'=>'p5', 'productName'=>'Stracciatella', 'productPrice'=>'180']) }}" class="btn btn-light">Order Here</a>
                         </div>
                     </div>
                 </div> {{-- Individual Pastry 5 End --}} {{-- Individual pastry 6 start --}}
                 <div id="pastry6" class="pastry row" style="display: none;">
-                    <div class="pastryImage col-xl-7 col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                    <div class="pastryImage col-sm-7 col-xs-12">
                         <img src="{{asset('/storage/myAssets/pastry6.jpg')}}" alt=""> {{-- Muffin Name --}}
                     </div>
-                    <div class="pastryDetails col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="pastryDetails col-sm-3 col-xs-12">
                         <div class="pastryNameHeading playFairDisplay">
-                            Strawberry
+                            Strawberry <span>
                         </div>
                         <div class="ingredientSubHeading">
                             Ingredients
@@ -339,8 +353,9 @@
                                 <li>Whipped Cream</li>
                             </ul>
                         </div>
+                        <span class="playFairDisplay" style="color:brown; font-size: 1.6em"><b>Rs</b>200</span>
                         <div class="orderButton text-center">
-                            <a href="" class="btn btn-light">Order Here</a>
+                            <a href="{{ route('cart.add', ['productId'=>'p6', 'productName'=>'Strawberry', 'productPrice'=>'200']) }}" class="btn btn-light">Order Here</a>
                         </div>
                     </div>
                 </div> {{-- Individual Pastry 6 End --}}
@@ -464,8 +479,7 @@
         {{-- footer details Start--}}
         <div id="siteFooterDetails" class="row">
             {{-- div 1 Start--}}
-            <div class="offset-xl-3 offset-lg-3"></div>
-            <div class="col-4">
+            <div class="offset-sm-3 col">
                 {{-- Heading Start --}}
                 <div class="heading playFairDisplay">
                     Treat yourself
@@ -480,7 +494,7 @@
                 </div>
                 {{-- Details End --}}
             </div> {{-- Div 1 end --}} {{-- div 2 Start--}}
-            <div class="col-4">
+            <div class="col">
                 {{-- Heading Start --}}
                 <div class="heading">
                     Pastry Love!
@@ -504,6 +518,7 @@
     <p>
         <b>built using</b>
         <ul style="list-style:none">
+            <li>Laravel(5.6) FrameWork</li>
             <li>BootStrap4 FrameWork</li>
             <li>Jquery</li>
             <li>Animate Css</li>
@@ -516,6 +531,7 @@
         <hr>
         <br>
         <b>anamamer0@gmail.com</b>
+        <span style="color:red">the project development is temporarily on halt</span>
     </p>
 </div>
 
@@ -539,7 +555,6 @@
                 if ($(this).isInViewport()) {
                     $(this).addClass(
                         'animated fadeIn').css({
-                        // animationDelay: '1s',
                         animationDuration: '2s',
                         animationIterationCount: '1'
                     });
@@ -547,25 +562,16 @@
                         'animated slideInLeft').css({
                         animationDelay: '1s',
                         animationDuration: '2s',
-                        // animationIterationCount: '1'
                     });
                 }
             });
         });
 
         $('.animateObject').hover(function () {
-                $(this).toggleClass('animated pulse').css({
-                    animationDuration: '2s'
-                });
-                $(this).find('p').css({
-                    display: 'inline-block'
-                });
-            },
-            function () {
-                $(this).find('p').css({
-                    display: 'none'
-                })
+            $(this).toggleClass('animated pulse').css({
+                animationDuration: '2s'
             });
+        });
 
         $('.btn').click(function () {
             $('.pastry').hide();

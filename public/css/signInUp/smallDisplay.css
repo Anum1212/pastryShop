@@ -1,0 +1,23 @@
+@media screen and (max-width: 785px) {
+    body {
+        background-image: url(../../storage/myAssets/authFormPage/2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 105vh;
+    }
+    #logo img {
+        min-width: 60vw;
+    }
+    #image {
+        margin-top: 25px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    #forms {
+        color: #fff;
+    }
+    #myTab {
+        margin-bottom: 20px;
+    }
+}

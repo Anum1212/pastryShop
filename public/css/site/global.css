@@ -93,8 +93,8 @@ body {
     color: #191919;
 }
 
-#breads .hiddenText{
-    height: 60px;
+#breads .marginBotttom {
+    margin-bottom: 60px;
 }
 
 #muffins {
