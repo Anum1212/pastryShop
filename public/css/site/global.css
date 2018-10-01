@@ -31,13 +31,13 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     height: 15vh;
-    top: -95px;
+    top: -100px;
     border: 0;
 }
 
 .joinWithDivider {
     position: relative;
-    top: -95px;
+    top: -100px;
 }
 
 .fullWidth {
