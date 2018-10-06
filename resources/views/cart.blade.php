@@ -19,19 +19,32 @@
         <div class="row">
             <div class="card" style="width: 100%">
                 @if( $row->id == 'b1')
-                <img class="card-img-top" src="{{ asset('/storage/myAssets/bread1.png') }}" style="width:250px; height:400px"> @elseif( $row->id == 'b2')
-                <img class="card-img-top" src="{{ asset('/storage/myAssets/bread2.png') }}" style="width:250px; height:400px"> @elseif( $row->id == 'b3')
-                <img class="card-img-top" src="{{ asset('/storage/myAssets/bread3.png') }}" style="width:250px; height:400px"> @elseif( $row->id == 'm1')
-                <img class="card-img-top" src="{{ asset('/storage/myAssets/muffin1.png') }}" style="width:250px; height:400px"> @elseif( $row->id == 'm1')
-                <img class="card-img-top" src="{{ asset('/storage/myAssets/muffin2.png') }}" style="width:250px; height:400px"> @elseif( $row->id == 'm1')
-                <img class="card-img-top" src="{{ asset('/storage/myAssets/muffin3.png') }}" style="width:250px; height:400px"> @elseif( $row->id == 'm1')
-                <img class="card-img-top" src="{{ asset('/storage/myAssets/muffin4.png') }}" style="width:250px; height:400px"> @elseif( $row->id == 'p1')
-                <img class="card-img-top" src="{{ asset('/storage/myAssets/pastry1.jpg') }}" style="width:250px; height:400px"> @elseif( $row->id == 'p2')
-                <img class="card-img-top" src="{{ asset('/storage/myAssets/pastry2.jpg') }}" style="width:250px; height:400px"> @elseif( $row->id == 'p3')
-                <img class="card-img-top" src="{{ asset('/storage/myAssets/pastry3.jpg') }}" style="width:250px; height:400px"> @elseif( $row->id == 'p4')
-                <img class="card-img-top" src="{{ asset('/storage/myAssets/pastry4.jpg') }}" style="width:250px; height:400px"> @elseif( $row->id == 'p5')
-                <img class="card-img-top" src="{{ asset('/storage/myAssets/pastry5.jpg') }}" style="width:250px; height:400px"> @elseif( $row->id == 'p6')
-                <img class="card-img-top" src="{{ asset('/storage/myAssets/pastry6.jpg') }}" style="width:250px; height:400px"> @endif
+                <img class="card-img-top" src="{{ asset('/storage/myAssets/bread1.png') }}" style="width:250px; height:400px"> 
+                @elseif( $row->id == 'b2')
+                <img class="card-img-top" src="{{ asset('/storage/myAssets/bread2.png') }}" style="width:250px; height:400px"> 
+                @elseif( $row->id == 'b3')
+                <img class="card-img-top" src="{{ asset('/storage/myAssets/bread3.png') }}" style="width:250px; height:400px"> 
+                @elseif( $row->id == 'm1')
+                <img class="card-img-top" src="{{ asset('/storage/myAssets/muffin1.png') }}" style="width:250px; height:400px">
+                 @elseif( $row->id == 'm2')
+                <img class="card-img-top" src="{{ asset('/storage/myAssets/muffin2.png') }}" style="width:250px; height:400px">
+                 @elseif( $row->id == 'm3')
+                <img class="card-img-top" src="{{ asset('/storage/myAssets/muffin3.png') }}" style="width:250px; height:400px">
+                 @elseif( $row->id == 'm4')
+                <img class="card-img-top" src="{{ asset('/storage/myAssets/muffin4.png') }}" style="width:250px; height:400px">
+                 @elseif( $row->id == 'p1')
+                <img class="card-img-top" src="{{ asset('/storage/myAssets/pastry1.jpg') }}" style="width:250px; height:400px">
+                 @elseif( $row->id == 'p2')
+                <img class="card-img-top" src="{{ asset('/storage/myAssets/pastry2.jpg') }}" style="width:250px; height:400px">
+                 @elseif( $row->id == 'p3')
+                <img class="card-img-top" src="{{ asset('/storage/myAssets/pastry3.jpg') }}" style="width:250px; height:400px">
+                 @elseif( $row->id == 'p4')
+                <img class="card-img-top" src="{{ asset('/storage/myAssets/pastry4.jpg') }}" style="width:250px; height:400px">
+                 @elseif( $row->id == 'p5')
+                <img class="card-img-top" src="{{ asset('/storage/myAssets/pastry5.jpg') }}" style="width:250px; height:400px">
+                 @elseif( $row->id == 'p6')
+                <img class="card-img-top" src="{{ asset('/storage/myAssets/pastry6.jpg') }}" style="width:250px; height:400px">
+                 @endif
                 <div class="card-body">
                     <div class="card-header bg-warning text-center">
                        <b> {{ $row->name }}</b>
@@ -81,18 +94,30 @@
                 <header>
                     <a class="remove" href="{{ route('cart.remove', ['productId'=> $row->rowId]) }}">
                         @if( $row->id == 'b1')
-                        <img src="{{ asset('/storage/myAssets/bread1.png') }}"> @elseif( $row->id == 'b2')
-                        <img src="{{ asset('/storage/myAssets/bread2.png') }}"> @elseif( $row->id == 'b3')
-                        <img src="{{ asset('/storage/myAssets/bread3.png') }}"> @elseif( $row->id == 'm1')
-                        <img src="{{ asset('/storage/myAssets/muffin1.png') }}"> @elseif( $row->id == 'm1')
-                        <img src="{{ asset('/storage/myAssets/muffin2.png') }}"> @elseif( $row->id == 'm1')
-                        <img src="{{ asset('/storage/myAssets/muffin3.png') }}"> @elseif( $row->id == 'm1')
-                        <img src="{{ asset('/storage/myAssets/muffin4.png') }}"> @elseif( $row->id == 'p1')
-                        <img src="{{ asset('/storage/myAssets/pastry1.jpg') }}"> @elseif( $row->id == 'p2')
-                        <img src="{{ asset('/storage/myAssets/pastry2.jpg') }}"> @elseif( $row->id == 'p3')
-                        <img src="{{ asset('/storage/myAssets/pastry3.jpg') }}"> @elseif( $row->id == 'p4')
-                        <img src="{{ asset('/storage/myAssets/pastry4.jpg') }}"> @elseif( $row->id == 'p5')
-                        <img src="{{ asset('/storage/myAssets/pastry5.jpg') }}"> @elseif( $row->id == 'p6')
+                        <img src="{{ asset('/storage/myAssets/bread1.png') }}"> 
+                        @elseif( $row->id == 'b2')
+                        <img src="{{ asset('/storage/myAssets/bread2.png') }}"> 
+                        @elseif( $row->id == 'b3')
+                        <img src="{{ asset('/storage/myAssets/bread3.png') }}"> 
+                        @elseif( $row->id == 'm1')
+                        <img src="{{ asset('/storage/myAssets/muffin1.png') }}"> 
+                        @elseif( $row->id == 'm2')
+                        <img src="{{ asset('/storage/myAssets/muffin2.png') }}"> 
+                        @elseif( $row->id == 'm3')
+                        <img src="{{ asset('/storage/myAssets/muffin3.png') }}"> 
+                        @elseif( $row->id == 'm4')
+                        <img src="{{ asset('/storage/myAssets/muffin4.png') }}"> 
+                        @elseif( $row->id == 'p1')
+                        <img src="{{ asset('/storage/myAssets/pastry1.jpg') }}"> 
+                        @elseif( $row->id == 'p2')
+                        <img src="{{ asset('/storage/myAssets/pastry2.jpg') }}"> 
+                        @elseif( $row->id == 'p3')
+                        <img src="{{ asset('/storage/myAssets/pastry3.jpg') }}"> 
+                        @elseif( $row->id == 'p4')
+                        <img src="{{ asset('/storage/myAssets/pastry4.jpg') }}"> 
+                        @elseif( $row->id == 'p5')
+                        <img src="{{ asset('/storage/myAssets/pastry5.jpg') }}"> 
+                        @elseif( $row->id == 'p6')
                         <img src="{{ asset('/storage/myAssets/pastry6.jpg') }}"> @endif
 
                         <h3>Remove product</h3>
