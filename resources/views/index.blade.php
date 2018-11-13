@@ -526,7 +526,7 @@
             <li>Animate Css</li>
         </ul>
         <b>
-            <a href="https://github.com/Anum1212/portfolio.git">GitHub Link to code</a>
+            <a href="https://github.com/Anum1212/pastryShop">GitHub Link to code</a>
         </b>
         <br>
         <br>
