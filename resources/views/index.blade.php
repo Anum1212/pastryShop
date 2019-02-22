@@ -513,29 +513,22 @@
         </div> {{-- footer details End--}}
     </div> {{-- Site Footer End --}}
 
+<footer>
+        <div class="container">
+          <b> get in touch</b>
+          <br>
+          <a href="mailto:anamamer0@gmail.com" class="my-email">Anum Amir(anamamer0@gmail.com)</a>
+          <br>
+          <a href="https://github.com/Anum1212/pastryShop" class="my-project-code">Source Code</a>
+          <br>
+          <a href="http://aua.net.pk" class="my-other-projects">Other Projects</a>
+        </div>
+      </footer>
 </div> {{-- Wrapper End --}} @endsection @section('script')
 
-<!-- Website Description Section -->
-<div class="text-center" id="Website DescriptionFooter">
-    <p>
-        <b>built using</b>
-        <ul style="list-style:none">
-            <li>Laravel(5.6) FrameWork</li>
-            <li>BootStrap4 FrameWork</li>
-            <li>Jquery</li>
-            <li>Animate Css</li>
-        </ul>
-        <b>
-            <a href="https://github.com/Anum1212/pastryShop">GitHub Link to code</a>
-        </b>
-        <br>
-        <br>
-        <hr>
-        <br>
-        <b>anamamer0@gmail.com</b>
-        <span style="color:red">the project development is temporarily on halt</span>
-    </p>
-</div>
+
+
+
 
 <script>
     $(document).ready(function () {

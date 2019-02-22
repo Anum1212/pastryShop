@@ -9,6 +9,7 @@
     <link href="{{ asset('css/jquery.bxslider.css') }}" rel="stylesheet">
     <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
     <link href="{{ asset('css/site/global.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/site/footer.css') }}" rel="stylesheet">
 </head>
 @section('head')    
 @show
